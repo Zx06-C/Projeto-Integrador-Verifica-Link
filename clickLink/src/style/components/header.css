@@ -5,126 +5,45 @@
   font-family: "Poppins", sans-serif;
 }
 
-header {
+header{
   width: 100%;
-  padding: 35px 0;
+  padding: 30px 0;
   background-color: black;
-  
 }
 
-.interface {
-  max-width: 1024px;
-  margin: 0 5%;
+.interface{
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-header .interface {
+header .interface{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-header .interface .menu{
-  justify-content: center;
-  align-items: center;
-}
-
-header .interface .logo{
-  display: flex;
-  align-items: center;
-  margin-right: 380px;
 }
 
 header .interface .logo img {
   width: 200px;
 }
 
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: 30px;
-  position: relative;
-  gap: 80px;
+header .interface .menu nav ul {
+  list-style-type: none;
 }
 
-ul li {
-  position: relative;
-  list-style: none;
-  width: 90px;
-  height: 60px;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 60px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
+header .interface .menu nav ul li {
+  display: inline-block;
+  margin: 0 70px;
 }
 
-ul li::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 60px;
-  background: linear-gradient(45deg, var(--i), var(--j));
-  opacity: 0;
-  transition: 0.5s;
+header .interface nav ul li a{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  transition:0.2s
 }
 
-ul li::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  height: 100%;
-  border-radius: 60px;
-  background: linear-gradient(45deg, var(--i), var(--j));
-  transition: 0.5s;
-  filter: blur(15px);
-  z-index: -1;
-  opacity: 0;
-}
-
-ul li:hover {
-  width: 180px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
-}
-
-ul li:hover::before {
-  opacity: 1;
-}
-
-ul li:hover::after {
-  opacity: 0.5;
-}
-
-ul li ion-icon {
-  color: #777;
-  font-size: 1.75em;
-  transition: 0.5s;
-  transition-delay: 0.25s;
-}
-
-ul li:hover ion-icon {
-  transform: scale(0);
-  color: #fff;
-  transition-delay: 0s;
-}
-
-ul li span {
-  position: absolute;
-}
-
-ul li .title {
-  color: #fff;
-  font-size: 1.1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transform: scale(0);
-  transition: 0.5s;
-  transition-delay: 0s;
-}
-
-ul li:hover .title {
-  transform: scale(1);
-  transition-delay: 0.25s;
+header .interface nav ul li a:hover{
+  color: #e6e8e8;
+  transform: scale(1.10);
+  font-weight: 700;
 }
